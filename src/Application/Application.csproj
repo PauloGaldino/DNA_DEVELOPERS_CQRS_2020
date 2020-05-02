@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Description>A camada de aplicação que é responsável por realizar a(s) aplicação(s) se comunicar diretamente com o Domínio. Nela são implementados:
+Classes dos Serviços da aplicação.
+Interfaces (contratos).
+DataTransferObjects (DTO).
+AutoMapper</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
