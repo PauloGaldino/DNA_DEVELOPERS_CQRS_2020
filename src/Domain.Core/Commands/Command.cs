@@ -1,6 +1,7 @@
 ﻿using Domain.Core.Events;
 using System;
-using System.ComponentModel.DataAnnotations;
+using FluentValidation.Results;
+
 
 namespace Domain.Core.Commands
 {

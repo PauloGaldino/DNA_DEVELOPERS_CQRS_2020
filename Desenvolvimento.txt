@@ -3,6 +3,7 @@
 Projeto
 Ordem de desensolvimento
 passos
+
 Domain.Core
 1
  cria pasta ->Models
@@ -27,6 +28,69 @@ cria pasta ->Commands
 6
 cria pasta ->Bus
 ---IMediatorHandler
+
+Domain
+
+7
+cria pasta ->Models
+---Usuario
+---Cliente
+---Produto
+8
+cria pasta ->Interfaces
+---IRepository ->insterface
+---IUnitOfwork ->interface
+---Iuser ->interface
+---ICiente ->interface
+---IProduto ->interface
+
+9
+cira a pasta ->Comannds
+cria subpasta ->Clientes
+---ClienteCommand->abstract
+---RegisteNewclienteCommand
+---RemoveClienteCommand
+---UpdateClienteCommand
+cria subpasta Produtos
+---ProdutoCommand ->abstract
+---RegisterNewProdutoCOmmand
+---RemoveProdutoCommand
+---UpdatePtodutoCommand
+
+10
+cria Valdations
+cria subpasta Clientes
+---ClienteValdation
+---RegisterNewClienteCommandValidation
+---RemoveCleinteCommandValidation
+---UpdateClienteCommandValidation
+cria subpasta Produto
+---ProdutoValidation
+---RegisterNewProdutoCommandValidation
+---RemoveProdutoCommandValidation
+---UpdatePtodutoCommandValidation
+
+11
+cria pasta ->Events
+cria subpasta ->Clientes
+---ClienteRegiseredEvent
+---ClienteRemovedEvent
+---ClienteUpdatedEvent
+cria subpasta ->Produtos
+---ProdutoRegisteredEvent
+---ProdutoRemovedEvent
+---ProdutoUpdatedEvent
+
+12
+cria pasta ->EventHandler
+---ClienteEventHandler
+---ProdutoEventHandler
+
+13
+cria pasta ->CommandHandlers
+---CommandHandler
+---ClienteCommandHandler
+---ProdutoCommandHandler
 
 
 
