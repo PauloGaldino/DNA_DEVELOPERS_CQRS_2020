@@ -17,5 +17,7 @@ namespace Domain.Core.Notifications
             Key = key;
             Value = value;
         }
+
+
     }
 }
