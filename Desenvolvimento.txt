@@ -165,6 +165,36 @@ cria pasta ->Authorization
 CrossCutting.IoC
 ---NativeInjectorBootStrapper
 
+22
+Application
+Cria pasta ->ViewModels
+---ClienteViewModel
+---ProdutoViewModel
+
+23
+cria pasta ->AutoMappers
+---DomainToViewModelMappingProfile
+---ViewModelToDomainMappingProfile
+24
+cria pasta ->EventSourcedNormalizer
+---ClienteHistoryData
+---ClienteHistory
+---ProdutoHistoryDada
+---ProdutoHistory
+
+25 
+cria pasta->Interfaces
+---IClienteAppService
+---IProdutoAppSevice
+
+25
+cria pasta ->Services
+cria subpasta ->Clientes
+---ClienteAppService
+cria subpasta ->Produtos
+---ProdutoAppService
+
+
 
 Domain
 SDK : 2.2
@@ -224,3 +254,10 @@ CrossCutting.IoC
 SDK : 2.2
 pacotes
 ---Microsoft.Extensions.DependencyInjection.Abstractions(2.2.0)
+
+Application
+SDK : 2.2
+pacotes
+---AutoMapper(9.0.0)
+---System.ComponentModel.Annotations(4.5.0)
+---System.Component.Primitives(4.3.0)
