@@ -17,6 +17,7 @@ Validações (caso seja necessário).</Description>
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Bus\CrossCutting.Bus.csproj" />
     <ProjectReference Include="..\Domain.Core\Domain.Core.csproj" />
   </ItemGroup>
 

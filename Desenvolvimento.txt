@@ -1,5 +1,3 @@
-
-
 Projeto
 Ordem de desensolvimento
 passos
@@ -125,6 +123,49 @@ cria pasta -> EventSourcing
 cria pasta ->UoW
 ---UnitOfWork
 
+CrossCutting
+CrossCutting.Bus
+19
+---InMemory->sealed
+
+
+CrossCutting.Identity
+20
+cria pasta ->Models
+---AspNetUser
+---ApplicationUser
+cria subpasta ->AccountViewModels
+---ExternalLoginViewModel
+---ForgotPasswordViewModel
+---LoginViewModel
+---LoginWith2faViewModel
+---LoginWithRecoveryCodeViewModel
+---RegisterViewModel
+---ResetPasswordViewModel
+cria subpasta ->ManageViewModels
+---ChangePasswordViewModel
+---EnableAuthenticatorViewModel
+---ExternalLoginsViewModel
+---GenerateRecoveryCodesViewModel
+---IndexViewModel
+---RemoveLoginViewModel
+---SetPasswordViewModel
+---TwoFactorAuthenticationViewModel
+cria pasta ->Services
+---IEmailSenderclear
+---ISmsSender
+---AuthEmailMessageSender
+cria pasta ->Extensions
+---EmailSenderExtensions
+cria pasta ->Authorization
+---ClaimRequirement
+---ClaimRequirementHandler
+
+21
+CrossCutting.IoC
+---NativeInjectorBootStrapper
+
+
 Domain
 SDK : 2.2
 pacotes 
@@ -153,4 +194,33 @@ pacotes
 ---Pomelo.EntityFrameworkCore.MySql(2.2.0)
 ---System.Reflection.TypeExtensions(4.5.1)
 
+CrossCutting
 
+CrossCutting.Bus
+SDK : 2.2
+pacotes
+--MediatR (7.0.0)
+
+CrossCutting.Identity
+SDK : 2.2
+pacotes
+---Microsoft.AspNet.Identity.Owin(2.2.2)
+---Microsoft.AspNetCore.Authorization(2.2.0)
+---Microsoft.AspNetCore.Http.Abstractions(2.2.0)
+---Microsoft.AspNetCore.Identity(2.2.0)
+---Microsoft.AspNetCore.Identity.EntityFrameworkCore(2.2.0)
+---Microsoft.AspNetCore.Mvc.ViewFeatures(2.2.0)
+---Microsoft.EntityFrameworkCore.Design(2.2.6)
+---Microsoft.EntityFrameworkCore.SqlServer(2.2.6)
+---Microsoft.EntityFrameworkCore.Tools(2.2.6)
+---Microsoft.Extensions.Configuration(2.2.0)
+---Microsoft.Extensions.Configuration.FileExtensions(2.2.0)
+---Microsoft.Extensions.Configuration.Json(2.2.0)
+---Microsoft.Owin.Security.OAuth(4.1.0)
+---Pomelo.EntityFrameworkCore.MySql(2.2.0)
+---SendGrid(9.12.7)
+
+CrossCutting.IoC
+SDK : 2.2
+pacotes
+---Microsoft.Extensions.DependencyInjection.Abstractions(2.2.0)

@@ -6,23 +6,26 @@ using Microsoft.Extensions.Hosting;
 
 namespace Infra.Data.Datas.Context
 {
+    /// <summary>
+    /// Classe que é responsavel por registrar os eventos do sistema
+    /// </summary>
     public class EventStoreDbContext : DbContext
     {
-        /// <summary>
-        /// Classe que é responsavel por registrar os eventos do sistema
-        /// </summary>
+
+        public DbSet<StoredEvent> StoredEvent { get; set; }
 
         private readonly IHostingEnvironment env;
+
         public EventStoreDbContext(IHostingEnvironment env)
         {
             this.env = env;
         }
-        public DbSet<StoredEvent> StoredEvent { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new StoreEventConfig());
-            
+
             base.OnModelCreating(modelBuilder);
         }
 

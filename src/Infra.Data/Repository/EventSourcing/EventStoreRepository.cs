@@ -1,26 +1,35 @@
 ﻿using Domain.Core.Events;
-using Domain.Core.Events.Interfaces;
-using Domain.Interfaces;
+using Infra.Data.Datas.Context;
 using Infra.Data.Repository.EventSourcing.Interfaces;
-using Newtonsoft.Json;
+using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Infra.Data.Repository.EventSourcing
 {
-    public class EventStore : IEventStore
+    public class EventStoreRepository : IEventStoreRepository
     {
-        private readonly IEventStoreRepository eventStoreRepository;
-        private readonly IUser user;
-        public void Save<T>(T theEvent) where T : Event
+        private readonly EventStoreDbContext _context;
+
+        public EventStoreRepository(EventStoreDbContext context)
         {
+            _context = context;
+        }
 
-            var serializedData = JsonConvert.SerializeObject(theEvent);
+        public IList<StoredEvent> All(Guid aggregateId)
+        {
+            return (from e in _context.StoredEvent where e.AggregateId == aggregateId select e).ToList();
+        }
 
-            var storedEvent = new StoredEvent(
-                theEvent,
-                serializedData,
-                user.Nome);
+        public void Store(StoredEvent theEvent)
+        {
+            _context.StoredEvent.Add(theEvent);
+            _context.SaveChanges();
+        }
 
-            eventStoreRepository.Store(storedEvent);
+        public void Dispose()
+        {
+            _context.Dispose();
         }
     }
 }

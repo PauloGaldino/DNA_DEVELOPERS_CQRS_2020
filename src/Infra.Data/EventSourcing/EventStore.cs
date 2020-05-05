@@ -11,13 +11,13 @@ namespace Infra.Data.EventSourcing
     /// </summary>
     public class EventStore : IEventStore
     {
-        private readonly IEventStoreRepository eventStoreRepository;
-        private readonly IUser user;
+        private readonly IEventStoreRepository _eventStoreRepository;
+        private readonly IUser _user;
 
         public EventStore(IEventStoreRepository eventStoreRepository, IUser user)
         {
-            this.eventStoreRepository = eventStoreRepository;
-            this.user = user;
+           _eventStoreRepository = eventStoreRepository;
+            _user = user;
         }
         
         public void Save<T>(T theEvent) where T : Event
@@ -27,9 +27,9 @@ namespace Infra.Data.EventSourcing
             var storedEvent = new StoredEvent(
                 theEvent,
                 serializedData,
-                user.Nome);
+                _user.Nome);
 
-            eventStoreRepository.Store(storedEvent);
+            _eventStoreRepository.Store(storedEvent);
         }
     }
 }

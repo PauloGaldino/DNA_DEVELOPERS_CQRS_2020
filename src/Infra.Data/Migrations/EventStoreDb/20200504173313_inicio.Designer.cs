@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Data.Migrations.EventStoreDb
 {
     [DbContext(typeof(EventStoreDbContext))]
-    [Migration("20200504132749_inicio")]
+    [Migration("20200504173313_inicio")]
     partial class inicio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
