@@ -10,21 +10,21 @@ namespace CrossCutting.Bus
 {
     public sealed class InMemoryBus : IMediatorHandler
     {
-        private readonly IMediator mediator;
-        private readonly IEventStore eventStore;
+        private readonly IMediator _mediator;
+        private readonly IEventStore _eventStore;
 
-        public InMemoryBus(IMediator mediator, IEventStore eventStore)
+        public InMemoryBus(IEventStore eventStore, IMediator mediator)
         {
-            this.mediator = mediator;
-            this.eventStore = eventStore;
+            _eventStore = eventStore;
+            _mediator = mediator;
         }
 
         public Task RaiseEvent<T>(T @event) where T : Event
         {
             if (!@event.MessageType.Equals("DomainNotification"))
-                eventStore?.Save(@event);
+                _eventStore?.Save(@event);
 
-            return mediator.Publish(@event);
+            return _mediator.Publish(@event);
         }
 
         public Task SendCommand<T>(T command) where T : Command

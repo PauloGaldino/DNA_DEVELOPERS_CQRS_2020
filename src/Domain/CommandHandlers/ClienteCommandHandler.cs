@@ -98,7 +98,7 @@ namespace Domain.CommandHandlers
 
             if (Commit())
             {
-                Bus.RaiseEvent(new ClienteremovedEvent(message.Id));
+                Bus.RaiseEvent(new ClienteRemovedEvent(message.Id));
             }
 
             return Task.FromResult(true);

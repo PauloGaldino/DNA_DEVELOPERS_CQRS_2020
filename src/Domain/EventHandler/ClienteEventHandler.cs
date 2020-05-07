@@ -7,7 +7,7 @@ namespace Domain.EventHandler
 {
     public class ClienteEventHandler :
         INotificationHandler<ClienteRegisteredEvent>,
-        INotificationHandler<ClienteremovedEvent>,
+        INotificationHandler<ClienteRemovedEvent>,
         INotificationHandler<ClienteUpdatedEvent>
     {
         public Task Handle(ClienteUpdatedEvent message, CancellationToken cancellationToken)
@@ -23,7 +23,7 @@ namespace Domain.EventHandler
             return Task.CompletedTask;
         }
 
-        public Task Handle(ClienteremovedEvent message, CancellationToken cancellationToken)
+        public Task Handle(ClienteRemovedEvent message, CancellationToken cancellationToken)
         {
             // Envie alguns e-mails em breve
 

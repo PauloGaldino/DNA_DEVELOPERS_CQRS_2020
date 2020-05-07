@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Core.Notifications
 {
+
     public class DomainNotificationHandler : INotificationHandler<DomainNotification>
     {
         private List<DomainNotification> _notifications;

@@ -3,9 +3,9 @@ using System;
 
 namespace Domain.Events.Clientes
 {
-    public class ClienteremovedEvent : Event
+    public class ClienteRemovedEvent : Event
     {
-        public ClienteremovedEvent(Guid id)
+        public ClienteRemovedEvent(Guid id)
         {
             Id = id;
             AggregateId = id;

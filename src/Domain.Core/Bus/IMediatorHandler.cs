@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace Domain.Core.Bus
 {
     /// <summary>
-    /// Classe responsável por processar os COmmands e os Events.
+    /// Classe responsável por processar os Commands e os Events.
     /// </summary>
     public interface IMediatorHandler
     {

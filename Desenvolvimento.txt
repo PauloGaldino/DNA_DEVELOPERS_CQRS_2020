@@ -1,263 +1,1 @@
-Projeto
-Ordem de desensolvimento
-passos
-
-Domain.Core
-1
- cria pasta ->Models
----Entity-->abstrct
----ValueObject-->abstrct
----StoredEvent
-2
-cria pasta ->Events
----Message-->abstract
----Event-->abstract
-3
-cria Event ->subpasta->Interfaces
----IEventStore ->interface
----IHandler ->interface
-4
-cia pasta ->Notifications
----DomainNotifications
----DomainNotificationHandler
-5
-cria pasta ->Commands
----Command->abstract
-6
-cria pasta ->Bus
----IMediatorHandler
-
-Domain
-
-7
-cria pasta ->Models
----Usuario
----Cliente
----Produto
-8
-cria pasta ->Interfaces
----IRepository ->insterface
----IUnitOfwork ->interface
----Iuser ->interface
----ICiente ->interface
----IProduto ->interface
-
-9
-cira a pasta ->Comannds
-cria subpasta ->Clientes
----ClienteCommand->abstract
----RegisteNewclienteCommand
----RemoveClienteCommand
----UpdateClienteCommand
-cria subpasta Produtos
----ProdutoCommand ->abstract
----RegisterNewProdutoCOmmand
----RemoveProdutoCommand
----UpdatePtodutoCommand
-
-10
-cria Valdations
-cria subpasta Clientes
----ClienteValdation
----RegisterNewClienteCommandValidation
----RemoveCleinteCommandValidation
----UpdateClienteCommandValidation
-cria subpasta Produto
----ProdutoValidation
----RegisterNewProdutoCommandValidation
----RemoveProdutoCommandValidation
----UpdatePtodutoCommandValidation
-
-11
-cria pasta ->Events
-cria subpasta ->Clientes
----ClienteRegiseredEvent
----ClienteRemovedEvent
----ClienteUpdatedEvent
-cria subpasta ->Produtos
----ProdutoRegisteredEvent
----ProdutoRemovedEvent
----ProdutoUpdatedEvent
-
-12
-cria pasta ->EventHandler
----ClienteEventHandler
----ProdutoEventHandler
-
-13
-cria pasta ->CommandHandlers
----CommandHandler
----ClienteCommandHandler
----ProdutoCommandHandler
-
-Infra.Data
-14
-cria pasta ->Datas
-subpasta ->Contex
----DnaDbContext
----EventStoreDbContext
-
-15
-cria pasta ->Configurations
-cria subPasta ->Clientes
----ClienteConfig
-cria subpasta ->Produtos
----ProdutoConfig
-
-16
-cria pasta ->Repository
----Repository
-cria subpasta ->Clientes
----ClienteRepository
-cria subpasta ->Produtos
----ProdutoRepository
-cria subpasta ->EventSourcing 
----EventStore
-cria subpasta ->Interfaces
----IEventRepository
-
-17
-cria pasta -> EventSourcing
----EventStore
-18
-cria pasta ->UoW
----UnitOfWork
-
-CrossCutting
-CrossCutting.Bus
-19
----InMemory->sealed
-
-
-CrossCutting.Identity
-20
-cria pasta ->Models
----AspNetUser
----ApplicationUser
-cria subpasta ->AccountViewModels
----ExternalLoginViewModel
----ForgotPasswordViewModel
----LoginViewModel
----LoginWith2faViewModel
----LoginWithRecoveryCodeViewModel
----RegisterViewModel
----ResetPasswordViewModel
-cria subpasta ->ManageViewModels
----ChangePasswordViewModel
----EnableAuthenticatorViewModel
----ExternalLoginsViewModel
----GenerateRecoveryCodesViewModel
----IndexViewModel
----RemoveLoginViewModel
----SetPasswordViewModel
----TwoFactorAuthenticationViewModel
-cria pasta ->Services
----IEmailSenderclear
----ISmsSender
----AuthEmailMessageSender
-cria pasta ->Extensions
----EmailSenderExtensions
-cria pasta ->Authorization
----ClaimRequirement
----ClaimRequirementHandler
-
-21
-CrossCutting.IoC
----NativeInjectorBootStrapper
-
-22
-Application
-Cria pasta ->ViewModels
----ClienteViewModel
----ProdutoViewModel
-
-23
-cria pasta ->AutoMappers
----DomainToViewModelMappingProfile
----ViewModelToDomainMappingProfile
-24
-cria pasta ->EventSourcedNormalizer
----ClienteHistoryData
----ClienteHistory
----ProdutoHistoryDada
----ProdutoHistory
-
-25 
-cria pasta->Interfaces
----IClienteAppService
----IProdutoAppSevice
-
-25
-cria pasta ->Services
-cria subpasta ->Clientes
----ClienteAppService
-cria subpasta ->Produtos
----ProdutoAppService
-
-
-
-Domain
-SDK : 2.2
-pacotes 
---FluentValidatotion (8.1.3)
---System.ComponentModel (4.3.0)
---System.ComponentModel.Annotation (4.5.0)
---System.Security.Claims (4.3.0)
-
-Domain.Core
-SDK : 2.2
-pacotes 
---FluentValidatotion (8.1.3)
---MediatR (6.0.0)
---System.ComponentModel (4.3.0)
-
-Infra>Data
-SDK :2.2
-pacotes
----Microsoft.EntityFrameworkCore.Design(2.2.6)
----Microsoft.EntityFrameworkCore.SqlServer(2.2.6)
----Microsoft.EntityFrameworkCore.Tools(2.2.6)
----Microsoft.Extensions.Configuration(2.2.0)
----Microsoft.Extensions.Configuration.Abstractions(2.2.0)
----Microsoft.Extensions.Configuration.Json(2.2.0)
----Microsoft.Extensions.Hosting.Abstractions(2.2.0)
----Pomelo.EntityFrameworkCore.MySql(2.2.0)
----System.Reflection.TypeExtensions(4.5.1)
-
-CrossCutting
-
-CrossCutting.Bus
-SDK : 2.2
-pacotes
---MediatR (7.0.0)
-
-CrossCutting.Identity
-SDK : 2.2
-pacotes
----Microsoft.AspNet.Identity.Owin(2.2.2)
----Microsoft.AspNetCore.Authorization(2.2.0)
----Microsoft.AspNetCore.Http.Abstractions(2.2.0)
----Microsoft.AspNetCore.Identity(2.2.0)
----Microsoft.AspNetCore.Identity.EntityFrameworkCore(2.2.0)
----Microsoft.AspNetCore.Mvc.ViewFeatures(2.2.0)
----Microsoft.EntityFrameworkCore.Design(2.2.6)
----Microsoft.EntityFrameworkCore.SqlServer(2.2.6)
----Microsoft.EntityFrameworkCore.Tools(2.2.6)
----Microsoft.Extensions.Configuration(2.2.0)
----Microsoft.Extensions.Configuration.FileExtensions(2.2.0)
----Microsoft.Extensions.Configuration.Json(2.2.0)
----Microsoft.Owin.Security.OAuth(4.1.0)
----Pomelo.EntityFrameworkCore.MySql(2.2.0)
----SendGrid(9.12.7)
-
-CrossCutting.IoC
-SDK : 2.2
-pacotes
----Microsoft.Extensions.DependencyInjection.Abstractions(2.2.0)
-
-Application
-SDK : 2.2
-pacotes
----AutoMapper(9.0.0)
----System.ComponentModel.Annotations(4.5.0)
----System.Component.Primitives(4.3.0)
+ProjetoOrdem de desensolvimentopassosDomain.Core1 cria pasta ->Models---Entity-->abstrct---ValueObject-->abstrct---StoredEvent2cria pasta ->Events---Message-->abstract---Event-->abstract3cria Event ->subpasta->Interfaces---IEventStore ->interface---IHandler ->interface4cia pasta ->Notifications---DomainNotifications---DomainNotificationHandler5cria pasta ->Commands---Command->abstract6cria pasta ->Bus---IMediatorHandlerDomain7cria pasta ->Models---Usuario---Cliente---Produto8cria pasta ->Interfaces---IRepository ->insterface---IUnitOfwork ->interface---Iuser ->interface---ICiente ->interface---IProduto ->interface9cira a pasta ->Comanndscria subpasta ->Clientes---ClienteCommand->abstract---RegisteNewclienteCommand---RemoveClienteCommand---UpdateClienteCommandcria subpasta Produtos---ProdutoCommand ->abstract---RegisterNewProdutoCOmmand---RemoveProdutoCommand---UpdatePtodutoCommand10cria Valdationscria subpasta Clientes---ClienteValdation---RegisterNewClienteCommandValidation---RemoveCleinteCommandValidation---UpdateClienteCommandValidationcria subpasta Produto---ProdutoValidation---RegisterNewProdutoCommandValidation---RemoveProdutoCommandValidation---UpdatePtodutoCommandValidation11cria pasta ->Eventscria subpasta ->Clientes---ClienteRegiseredEvent---ClienteRemovedEvent---ClienteUpdatedEventcria subpasta ->Produtos---ProdutoRegisteredEvent---ProdutoRemovedEvent---ProdutoUpdatedEvent12cria pasta ->EventHandler---ClienteEventHandler---ProdutoEventHandler13cria pasta ->CommandHandlers---CommandHandler---ClienteCommandHandler---ProdutoCommandHandlerInfra.Data14cria pasta ->Datassubpasta ->Contex---DnaDbContext---EventStoreDbContext15cria pasta ->Configurationscria subPasta ->Clientes---ClienteConfigcria subpasta ->Produtos---ProdutoConfig16cria pasta ->Repository---Repositorycria subpasta ->Clientes---ClienteRepositorycria subpasta ->Produtos---ProdutoRepositorycria subpasta ->EventSourcing ---EventStorecria subpasta ->Interfaces---IEventRepository17cria pasta -> EventSourcing---EventStore18cria pasta ->UoW---UnitOfWorkCrossCuttingCrossCutting.Bus19---InMemory->sealedCrossCutting.Identity20cria pasta ->Models---AspNetUser---ApplicationUsercria subpasta ->AccountViewModels---ExternalLoginViewModel---ForgotPasswordViewModel---LoginViewModel---LoginWith2faViewModel---LoginWithRecoveryCodeViewModel---RegisterViewModel---ResetPasswordViewModelcria subpasta ->ManageViewModels---ChangePasswordViewModel---EnableAuthenticatorViewModel---ExternalLoginsViewModel---GenerateRecoveryCodesViewModel---IndexViewModel---RemoveLoginViewModel---SetPasswordViewModel---TwoFactorAuthenticationViewModelcria pasta ->Services---IEmailSenderclear---ISmsSender---AuthEmailMessageSendercria pasta ->Extensions---EmailSenderExtensionscria pasta ->Authorization---ClaimRequirement---ClaimRequirementHandler21CrossCutting.IoC---NativeInjectorBootStrapper22ApplicationCria pasta ->ViewModels---ClienteViewModel---ProdutoViewModel23cria pasta ->AutoMappers---DomainToViewModelMappingProfile---ViewModelToDomainMappingProfile---AutoMapperConfig24cria pasta ->EventSourcedNormalizer---ClienteHistoryData---ClienteHistory---ProdutoHistoryDada---ProdutoHistory25 cria pasta->Interfaces---IClienteAppService---IProdutoAppSevice26cria pasta ->Servicescria subpasta ->Clientes---ClienteAppServicecria subpasta ->Produtos---ProdutoAppService27Service.Apicria pasta ->Configurations---AutoMapperSetup -->static---WebApiServiceCollectionExternsions->static---RouteConvention28cria pasta -> Controller---ApiController---AccountController---ClienteController29reescreve stsrtupDomainSDK : 2.2pacotes --FluentValidatotion (8.1.3)--System.ComponentModel (4.3.0)--System.ComponentModel.Annotation (4.5.0)--System.Security.Claims (4.3.0)Domain.CoreSDK : 2.2pacotes --FluentValidatotion (8.1.3)--MediatR (6.0.0)--System.ComponentModel (4.3.0)Infra>DataSDK :2.2pacotes---Microsoft.EntityFrameworkCore.Design(2.2.6)---Microsoft.EntityFrameworkCore.SqlServer(2.2.6)---Microsoft.EntityFrameworkCore.Tools(2.2.6)---Microsoft.Extensions.Configuration(2.2.0)---Microsoft.Extensions.Configuration.Abstractions(2.2.0)---Microsoft.Extensions.Configuration.Json(2.2.0)---Microsoft.Extensions.Hosting.Abstractions(2.2.0)---Pomelo.EntityFrameworkCore.MySql(2.2.0)---System.Reflection.TypeExtensions(4.5.1)CrossCuttingCrossCutting.BusSDK : 2.2pacotes--MediatR (7.0.0)CrossCutting.IdentitySDK : 2.2pacotes---Microsoft.AspNet.Identity.Owin(2.2.2)---Microsoft.AspNetCore.Authorization(2.2.0)---Microsoft.AspNetCore.Http.Abstractions(2.2.0)---Microsoft.AspNetCore.Identity(2.2.0)---Microsoft.AspNetCore.Identity.EntityFrameworkCore(2.2.0)---Microsoft.AspNetCore.Mvc.ViewFeatures(2.2.0)---Microsoft.EntityFrameworkCore.Design(2.2.6)---Microsoft.EntityFrameworkCore.SqlServer(2.2.6)---Microsoft.EntityFrameworkCore.Tools(2.2.6)---Microsoft.Extensions.Configuration(2.2.0)---Microsoft.Extensions.Configuration.FileExtensions(2.2.0)---Microsoft.Extensions.Configuration.Json(2.2.0)---Microsoft.Owin.Security.OAuth(4.1.0)---Pomelo.EntityFrameworkCore.MySql(2.2.0)---SendGrid(9.12.7)CrossCutting.IoCSDK : 2.2pacotes---Microsoft.Extensions.DependencyInjection.Abstractions(2.2.0)ApplicationSDK : 2.2pacotes---AutoMapper(9.0.0)---System.ComponentModel.Annotations(4.5.0)---System.Component.Primitives(4.3.0)ServiceSDK : 2.2pacotes---AutoMapper.Extensions.Microsoft.DependencyInjection(6.0.0)---MediatR.Extensions.Microsoft.DependencyInjection(6.0.1)---Microsoft.AspNetCore.Razor.Design(2.2.0)---Microsoft.VisualStudio.Azure.Containers.Tools.Targets(1.10.8)---Microsoft.VisualStudio.Web.CodeGeneration.Design(2.2.3)---Swashbuckle.AspNetCore.Swagger(4.0.1)

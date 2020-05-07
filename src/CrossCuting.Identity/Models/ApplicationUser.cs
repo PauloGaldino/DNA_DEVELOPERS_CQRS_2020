@@ -9,6 +9,6 @@ namespace CrossCuting.Identity.Models
         // Add profile data for application users by adding properties to the ApplicationUser class
         // Adicione dados de perfil para usuários do aplicativo adicionando propriedades à classe ApplicationUser
         public string Nome { get; set; }
-        public DateTime DataNasimento { get; set; }
+        public DateTime DataNascimento { get; set; }
     }
 }

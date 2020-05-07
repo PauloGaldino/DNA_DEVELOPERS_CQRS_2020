@@ -1,4 +1,7 @@
-﻿using CrossCuting.Identity.Authorizations;
+﻿using Application.Interfaces;
+using Application.Services.Clientes;
+using Application.Services.Produtos;
+using CrossCuting.Identity.Authorizations;
 using CrossCuting.Identity.Models;
 using CrossCuting.Identity.Services;
 using CrossCutting.Bus;
@@ -7,6 +10,7 @@ using Domain.Core.Events.Interfaces;
 using Domain.Core.Notifications;
 using Domain.EventHandler;
 using Domain.Events.Clientes;
+using Domain.Events.Produtos;
 using Domain.Interfaces;
 using Domain.Interfaces.DNA.Domain.Interfaces;
 using Infra.Data.Datas.Context;
@@ -34,9 +38,10 @@ namespace CrossCutting.IoC
             services.AddSingleton<IAuthorizationHandler, ClaimsRequirementHandler>();
             #region depois que implematar a camada de application
 
-            //// Application
-            ////===================================================================================================
-            //services.AddScoped<IClienteAppService, ClienteAppService>();
+            // Application
+            //===================================================================================================
+            services.AddScoped<IClienteAppService, ClienteAppService>();
+            services.AddScoped<IProdutoAppService, ProdutoAppService>();
 
             //services.AddScoped<ICategoriaAppService, CategoriaAppService>();
 
@@ -57,7 +62,12 @@ namespace CrossCutting.IoC
             //Cliente
             services.AddScoped<INotificationHandler<ClienteRegisteredEvent>, ClienteEventHandler>();
             services.AddScoped<INotificationHandler<ClienteUpdatedEvent>, ClienteEventHandler>();
-            services.AddScoped<INotificationHandler<ClienteremovedEvent>, ClienteEventHandler>();
+            services.AddScoped<INotificationHandler<ClienteRemovedEvent>, ClienteEventHandler>();
+
+            //Produto
+            services.AddScoped<INotificationHandler<ProdutoRegisteredEvent>, ProdutoEventHandler>();
+            services.AddScoped<INotificationHandler<ProdutoUpdatedEvent>, ProdutoEventHandler>();
+            services.AddScoped <INotificationHandler<ProdutoRemovedEvent>, ProdutoEventHandler>();
 
             #region para descomentar
             ////Categoria
