@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNetCore.Authentication;
-using System;
+﻿using Microsoft.AspNetCore.Authentication;
 using System.Collections.Generic;
-using System.Text;
+using UserLoginInfo = Microsoft.AspNetCore.Identity.UserLoginInfo;
 
 namespace CrossCuting.Identity.Models.ManageViewModels
 {
-    public class ExternalLoginsViewModel
+    public class ExternalLoginViewModel
     {
         public IList<UserLoginInfo> CurrentLogins { get; set; }
 
@@ -15,5 +13,6 @@ namespace CrossCuting.Identity.Models.ManageViewModels
         public bool ShowRemoveButton { get; set; }
 
         public string StatusMessage { get; set; }
+
     }
 }

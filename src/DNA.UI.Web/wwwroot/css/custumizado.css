@@ -1,2 +1,26 @@
-﻿body {
+﻿/*=======================Começo do Normalize==================================*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.//Corrija a altura da linha em todos os navegadores.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.//Impedir ajustes no tamanho da fonte após alterações de orientação no iOS
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.//Remove as margens de todos os navegadores
+ */
+
+body {
+  margin: 0;
 }

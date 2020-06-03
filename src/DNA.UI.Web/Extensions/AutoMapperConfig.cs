@@ -3,18 +3,17 @@ using Application.AutoMappers;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Service.Api.Configurations
+namespace DNA.UI.Web.Extensions
 {
     public static class AutoMapperSetup
     {
         public static void AddAutoMapperSetup(this IServiceCollection services)
         {
             if (services == null) throw new ArgumentNullException(nameof(services));
-
             services.AddAutoMapper();
 
-            // Registrar mapeamentos automaticamente funciona apenas se  as classes Automapper Profile estão no projeto ASP.NET
-
+            // Registering Mappings automatically only works if the 
+            // Automapper Profile classes are in ASP.NET project
             AutoMapperConfig.RegisterMappings();
         }
     }

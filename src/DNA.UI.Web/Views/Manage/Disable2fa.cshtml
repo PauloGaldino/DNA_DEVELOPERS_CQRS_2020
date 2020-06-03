@@ -1,0 +1,26 @@
+﻿@using DNA.UI.Web.Views.Manage
+@{
+    ViewData["Title"] = "Desativa autenticação de dois fatores(2FA)";
+    ViewData.AddActivePage(ManageNavPages.TwoFactorAuthentication);
+}
+<h2>@ViewData["Title"]</h2>
+<div class="alert alert-warning" role="alert">
+    <p>
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        <strong>Esta ação desativa apenas 2FA.</strong>
+    </p>
+    <p>
+        A desativação do 2FA não altera as chaves usadas nos aplicativos autenticadores. Se você deseja alterar a chave
+        usado em um aplicativo autenticador, você deve <a asp-action="ResetAuthenticatorWarning">redefinir sua chaves do autenticador.</a>
+    </p>
+
+    <div>
+        <form asp-action="Disable2fa" method="post" class="form-control">
+            <button class="btn btn-danger" type="submit">Desativar 12FA</button>
+        </form>
+    </div>
+
+</div>
+
+
+

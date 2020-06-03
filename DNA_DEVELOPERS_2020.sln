@@ -48,7 +48,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Applicat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Api", "src\Service.Api\Service.Api.csproj", "{F37DFBA7-50E8-4B1E-985B-63B068C684D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNA.UI.Web", "src\DNA.UI.Web\DNA.UI.Web.csproj", "{8C72E5E9-0173-4BBD-96E1-D549F1BF64DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNA.UI.Web", "src\DNA.UI.Web\DNA.UI.Web.csproj", "{8C72E5E9-0173-4BBD-96E1-D549F1BF64DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

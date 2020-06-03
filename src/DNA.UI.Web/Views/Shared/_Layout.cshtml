@@ -3,75 +3,227 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DNA.UI.Web</title>
+    <title>@ViewData["Title"] - DNA Develpers </title>
 
-    <environment include="Development">
+    <environment names="Development">
+
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+        <link href="~/css/custumizado.css" rel="stylesheet" />
+
     </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
     </environment>
-    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DNA.UI.Web</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    <!-- Onde fica o logotipo e as configurações do menu -->
+    <header class="header">
+        <div class="container">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="grid-2">
+                <img src="~/img/icones/dna-logo.svg" alt="DNA_Project">
+            </a>
+            <nav class="grid-7 header_menu">
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Produto">Produtos</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfólio</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contato">Contatos</a></li>
+                    <li><a asp-area="" asp-controller="Cliente" asp-action="Index">Clientes</a></li>
+                </ul>
+            </nav>
+            @await Html.PartialAsync("_LoginPartial")
+        </div>
+    </header>
+    <!-- Fim das configuraçõe do menu -->
+    <!--Inico do footer alterado-->
+    @RenderBody()
+    <section class="quebra">
+        <blockquote class="quote-externo container">
+            <p>
+                "O nosso verdadeiro compromisso é servir você,
+                pois você sempre será nossa primeira opção..."
+            </p>
+            <cite>JOSÉ PAULO GALDINO</cite>
+        </blockquote>
+    </section>
+    <!-- Fim da secção do footer quote -->
+    <!-- Inicio do footer -->
+    <footer>
+        <div class="footer">
+            <div class="container ">
+                <div class="grid-7 footer_historia">
+                    <H3>Nossa história</H3>
+                    <p>
+                        O verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana cotidiana. interesse por todos os detalhes da vida cotidiana cotidiana.
+                    </p>
+                </div>
+                <div class="grid-5 footer_contato">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>- (19)98932-7757</li>
+                        <li>- dnadevelopersoftware@gmail.com</li>
+                        <li>- Rua Analândia, 474-São Joaquim</li>
+                        <li>- CEP-13455-015</li>
+                        <li>- Santa Bárbara d'Oeste-SP</li>
+                    </ul>
+                </div>
+                <div class="grid-4 footer_redes">
+                    <h3>Redes</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/DNA-Developers-101197861382213/" target="blank">
+
+                                <img src="~/img/home/footer/facebook.svg" />
+
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li>
+                            <a href="http://instagram.com" target="blank">
+                                <img src="~/img/home/footer/instagram.svg" />
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://twitter.com" target="blank">
+                                <img src="~/img/home/footer/twitter.svg" />
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - DNA.UI.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        <!--Div copy -->
+        <div class="copy">
+            <div class="container">
+                <p>&copy; DNA Develor's Project @DateTime.Now.Year - Version 1.0  Todos os direitos reservados</p>
+                <p>Developed by - <a href="http://jose.galdino4@fatec.sp.gov" target="_blank">José Paulo Galdino</a> - This is an open-source a Demo project <a href="https://github.com/PauloGaldino/DNA_Developer-s" target="_blank">DNA Develper's GitHub</a></p>
+            </div>
         </div>
     </footer>
+    <!-- Fim do footer -->
+    <!--Fim do footer alterado-->
+    <environment names="Development">
 
-    <environment include="Development">
+
         <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+        <script src="~/js/simple-anime.js"></script>
+        <script src="~/js/simple-slide.js"></script>
+        <script src="~/js/script.js"></script>
+
     </environment>
-    <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+                asp-fallback-test="window.jQuery">
         </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
         </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+
+        <script src="~/js/simple-anime.js"></script>
+        <script src="~/js/simple-slide.js"></script>
+        <script src="~/js/script.js"></script>
     </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+
+
+
+@*@using Microsoft.AspNetCore.Hosting
+    @using Microsoft.AspNetCore.Mvc.ViewEngines
+    @inject IHostingEnvironment Environment
+    @inject ICompositeViewEngine Engine
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - DNA.UI.Web</title>
+
+        <environment include="Development">
+            <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.css" />
+        </environment>
+        <environment exclude="Development">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                  asp-fallback-href="~/Identity/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        </environment>
+        <link rel="stylesheet" href="~/Identity/css/site.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-light navbar-toggleable-sm bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" href="~/">DNA.UI.Web</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        @{
+                            var result = Engine.FindView(ViewContext, "_LoginPartial", isMainPage: false);
+                        }
+                        @if (result.Success)
+                        {
+                            await Html.RenderPartialAsync("_LoginPartial");
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException("The default Identity UI layout requires a partial view '_LoginPartial' " +
+                                "usually located at '/Pages/_LoginPartial' or at '/Views/Shared/_LoginPartial' to work. Based on your configuration " +
+                                $"we have looked at it in the following locations: {System.Environment.NewLine}{string.Join(System.Environment.NewLine, result.SearchedLocations)}.");
+                        }
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <partial name="_CookieConsentPartial" optional />
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+        <footer class="footer border-top text-muted">
+            <div class="container">
+                &copy; 2020 - DNA.UI.Web - <a asp-area="" asp-page="Privacy">Privacy</a>
+            </div>
+        </footer>
+
+        <environment include="Development">
+            <script src="~/Identity/lib/jquery/dist/jquery.js"></script>
+            <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                    asp-fallback-src="~/Identity/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                    asp-fallback-src="~/Identity/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+            </script>
+        </environment>
+        <script src="~/Identity/js/site.js" asp-append-version="true"></script>
+
+        @RenderSection("Scripts", required: false)
+    </body>
+    </html>*@

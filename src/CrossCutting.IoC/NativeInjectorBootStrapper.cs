@@ -33,6 +33,8 @@ namespace CrossCutting.IoC
             // ASP.NET HttpContext dependency
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            // Domain Bus (Mediator)
+            services.AddScoped<IMediatorHandler, InMemoryBus>();
 
             // ASP.NET Authorization Polices
             services.AddSingleton<IAuthorizationHandler, ClaimsRequirementHandler>();
@@ -67,7 +69,7 @@ namespace CrossCutting.IoC
             //Produto
             services.AddScoped<INotificationHandler<ProdutoRegisteredEvent>, ProdutoEventHandler>();
             services.AddScoped<INotificationHandler<ProdutoUpdatedEvent>, ProdutoEventHandler>();
-            services.AddScoped <INotificationHandler<ProdutoRemovedEvent>, ProdutoEventHandler>();
+            services.AddScoped<INotificationHandler<ProdutoRemovedEvent>, ProdutoEventHandler>();
 
             #region para descomentar
             ////Categoria
@@ -156,5 +158,5 @@ namespace CrossCutting.IoC
             // Infra - Identity
             services.AddScoped<IUser, AspNetUser>();
         }
-        }
+    }
 }

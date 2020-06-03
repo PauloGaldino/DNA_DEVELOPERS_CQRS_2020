@@ -1,0 +1,17 @@
+﻿
+@{ }
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <div class="container">
+        <div class="grid-7 header_menu manager">
+            @await Html.PartialAsync("_ManagerNav")
+        </div>
+        <div class="grid-7">
+            @RenderBody();
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

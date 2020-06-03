@@ -1,10 +1,7 @@
 ﻿using Application.Interfaces;
-using Application.Services.Clientes;
 using Application.ViewModels;
 using Domain.Core.Bus;
 using Domain.Core.Notifications;
-using Domain.Interfaces;
-using Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -45,7 +42,7 @@ namespace Service.Api.Controllers
         }
 
         [HttpPost]
-        [Authorize(Policy = "CanWriteCustumerData")]
+        [Authorize(Policy = "CanWriteCustomerData")]
         [Route("customer-management")]
         public IActionResult Post([FromBody]ClienteViewModel customerViewModel)
         {
@@ -61,7 +58,7 @@ namespace Service.Api.Controllers
         }
         
         [HttpPut]
-        [Authorize(Policy = "CanWriteCustumerData")]
+        [Authorize(Policy = "CanWriteCustomerData")]
         [Route("customer-management")]
         public IActionResult Put([FromBody]ClienteViewModel customerViewModel)
         {
@@ -77,7 +74,7 @@ namespace Service.Api.Controllers
         }
 
         [HttpDelete]
-        [Authorize(Policy = "CanWriteCustumerData")]
+        [Authorize(Policy = "CanWriteCustomerData")]
         [Route("customer-management")]
         public IActionResult Delete(Guid id)
         {
