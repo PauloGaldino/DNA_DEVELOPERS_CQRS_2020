@@ -5,8 +5,8 @@
    ========================================================================== */
 
 /**
- * 1. Correct the line height in all browsers.//Corrija a altura da linha em todos os navegadores.
- * 2. Prevent adjustments of font size after orientation changes in iOS.//Impedir ajustes no tamanho da fonte após alterações de orientação no iOS
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
 html {
@@ -18,9 +18,1810 @@ html {
    ========================================================================== */
 
 /**
- * Remove the margin in all browsers.//Remove as margens de todos os navegadores
+ * Remove the margin in all browsers.
  */
 
 body {
   margin: 0;
 }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+  /**
+ * Remove the inner border and padding in Firefox.
+ */
+
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  /**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+  /**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+/*=======================Final do Normalize===================================*/
+
+/*=======================Começo do Reset======================================*/
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+/**
+ * Remove anchor tex-decoration
+ */
+
+a {
+  text-decoration: none;
+}
+
+/**
+ * Remove list-style
+ */
+
+ol, ul {
+  list-style: none;
+}
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul {
+  font-size: 1em;
+  font-weight: normal;
+}
+/*=======================Final do Reset=======================================*/
+
+/*=======================Começo do Grid=======================================*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0px;
+  position: relative;
+}
+
+  .container:after, .container:before {
+    content: " ";
+    display: table;
+  }
+
+  .container:after {
+    clear: both;
+  }
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3, .grid-1-4 {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.grid-1 {
+  width: 40px;
+}
+
+.grid-2 {
+  width: 100px;
+}
+
+.grid-3 {
+  width: 160px;
+}
+
+.grid-4 {
+  width: 220px;
+}
+
+.grid-5 {
+  width: 280px;
+}
+
+.grid-6 {
+  width: 340px;
+}
+
+.grid-7 {
+  width: 400px;
+}
+
+.grid-8 {
+  width: 460px;
+}
+
+.grid-9 {
+  width: 520px;
+}
+
+.grid-10 {
+  width: 580px;
+}
+
+.grid-11 {
+  width: 640px;
+}
+
+.grid-12 {
+  width: 700px;
+}
+
+.grid-13 {
+  width: 760px;
+}
+
+.grid-14 {
+  width: 820px;
+}
+
+.grid-15 {
+  width: 880px;
+}
+
+.grid-16 {
+  width: 940px;
+}
+
+.grid-1-3 {
+  width: 300px;
+}
+
+.grid-1-4 {
+  width: 520px;
+}
+
+@media only screen and (min-width: 788px) and (max-width: 979px) {
+
+  .container {
+    width: 788px;
+  }
+
+  .grid-1 {
+    width: 28px;
+  }
+
+  .grid-2 {
+    width: 76px;
+  }
+
+  .grid-3 {
+    width: 124px;
+  }
+
+  .grid-4 {
+    width: 172px;
+  }
+
+  .grid-5 {
+    width: 220px;
+  }
+
+  .grid-6 {
+    width: 268px;
+  }
+
+  .grid-7 {
+    width: 316px;
+  }
+
+  .grid-8 {
+    width: 364px;
+  }
+
+  .grid-9 {
+    width: 412px;
+  }
+
+  .grid-10 {
+    width: 460px;
+  }
+
+  .grid-11 {
+    width: 508px;
+  }
+
+  .grid-12 {
+    width: 556px;
+  }
+
+  .grid-13 {
+    width: 604px;
+  }
+
+  .grid-14 {
+    width: 652px;
+  }
+
+  .grid-15 {
+    width: 700px;
+  }
+
+  .grid-16 {
+    width: 748px;
+  }
+
+  .grid-1-3 {
+    width: 236px;
+  }
+
+  .grid-1-4 {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 787px) {
+
+  .container {
+    width: 300px;
+  }
+
+  .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3, .grid-1-4 {
+    width: 300px;
+    margin: 0 0 20px 0;
+    float: none;
+  }
+}
+
+/*=======================Final do Grid========================================*/
+/*=======================Começo do Estio=======================================*/
+/* ================Estilos Gerais======================= */
+/**
+  *Define o estilo de fonte padrãp para os paragrafos
+*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/**
+  *Define o estilo de fonte padrãp para os paragrafos
+*/
+p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/**
+  *Define a largura de cacad imagem dentro do bloco
+*/
+img {
+  display: block;
+  max-width: 100%
+}
+/**
+  *Define a borda, os espaços, as cores
+  *Tamanho da fonte, aktura das linhas, transforma o texto em maiúsculo, em negrito e
+  *o espaçamento entre as letras
+*/
+.btn {
+  border: 4px solid #fec63e;
+  padding: 10px 20px;
+  color: #fec63e;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .1em;
+}
+
+/**
+  *personaliza aclasse btn.introducao
+*/
+.btn-introducao {
+  color: #fec63e;
+  background: rgba(0,0,0,0.3);
+}
+
+/**
+  *adiciona o efeito hover na classe btn mudando de cor
+  *ao passar o mouse em cima
+*/
+.btn:hover {
+  color: #fff;
+  border-color: #fff;
+}
+/**
+  *adiciona o efeito hover na classe btn mudando de cor
+  *ao passar o mouse em cima
+*/
+.btn.btn-preto:hover {
+  color: #000;
+  border-color: #000;
+}
+
+.btn-bracketed::before {
+  display: inline-block;
+  content: "[";
+  padding-right: 0.5em;
+}
+
+.btn-bracketed::after {
+  display: inline-block;
+  content: "]";
+  padding-left: 0.5em;
+}
+/**
+  Personaliza o subtitulo
+  *Tamanho da fonte, altura da linha,define a cor das letras,
+  *transforma em negrito,tranforma o texto em maiúsculo
+  *espaço entre as letras, alinha o texto no centro
+  *
+*/
+.subtitulo {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+  /**
+  *Define as linha embaixo do subtitulo,alinha 
+*/
+  .subtitulo:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #000;
+    margin: 8px auto;
+  }
+
+/**
+  Personaliza o subtitulo.interno
+  *Tamanho da fonte, altura da linha,define a cor das letras,
+  *transforma em negrito,tranforma o texto em maiúsculo
+  *espaço entre as letras, alinha o texto no centro
+  *
+*/
+.subtitulo-interno {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+
+  .subtitulo-interno:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #000;
+    margin: 8px 0;
+  }
+
+/* Carousel */
+/* Carousel */
+
+.carousel-caption p {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 20px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.carousel-caption h1 {
+  margin-top: 18px;
+  font-size: 48px;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+#myCarousel li {
+  border-color: #fff;
+  background: transparent;
+}
+
+#myCarousel .active {
+  background: #fec63e;
+}
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".jpg"] {
+  width: 100%;
+  height: 400px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+  /* Hide captions */
+  .carousel-caption {
+    display: none
+  }
+}
+
+
+/* ================Header=============================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fec63e; /* Amarelo */
+  padding: 15px 0;
+  z-index: 10;
+}
+
+.header_menu {
+  text-align: left;
+}
+
+  .header_menu ul li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 15px;
+  }
+
+    .header_menu ul li a {
+      color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: 12px;
+      line-height: 10px;
+      padding: 10px 0;
+    }
+
+      .header_menu ul li a:hover {
+        color: #FFF;
+        font-size: 13px;
+      }
+
+      .header_menu ul li a.menu_ativo {
+        color: #FFF;
+      }
+
+/*.header_login {
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: -5px;
+}
+
+  .header_login .btn-link {
+    border: 0px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 12px;
+    line-height: 10px;
+    background: #fec63e;
+    padding: 3px;
+  }*/
+
+/* ================Introdução============================ */
+.introducao {
+  width: 100%;
+  height: 380px;
+  background: url("../../img/home/introducao/introducao.jpg")no-repeat center;
+  background-size: cover;
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.quote-externo {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+  .quote-externo p {
+    font-style: italic;
+  }
+
+    .quote-externo p:before, .quote-externo p:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #fff;
+      margin: 14px auto 10px auto;
+    }
+
+  .quote-externo cite {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    letter-spacing: .1em;
+  }
+
+/* ================Introducao Interna=========================*/
+
+.introducao-interna {
+  width: 100%;
+  margin-top: 73px;
+  height: 160px;
+  text-align: center;
+  color: #fff;
+  padding-top: 30px;
+}
+
+  .introducao-interna h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+    .introducao-interna h1:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #fff;
+      margin: 6px auto 10px auto;
+    }
+
+/* ================Portfólio==================================*/
+
+.portfolio {
+  width: 100%;
+  background: #000;
+  padding: 40px 0;
+}
+
+  .portfolio .subtitulo {
+    color: #fec63e;
+  }
+
+    .portfolio .subtitulo:after {
+      background: #fec63e;
+      margin-bottom: 40px;
+    }
+
+.portfolio_lista li {
+  margin-top: 30px 0;
+}
+
+  .portfolio_lista li:last-child {
+    margin-top: 20px;
+  }
+
+.portfolio .call p {
+  color: #fff;
+}
+/* ================Produtos============================= */
+
+.produtos {
+  padding: 60px 0;
+}
+
+.produtos_lista li {
+  background: #fec63e;
+  text-align: center;
+}
+
+  /* Necessário para centralizar as imagens */
+  .produtos_lista li img {
+    margin: 0 auto;
+  }
+
+  .produtos_lista li h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+    .produtos_lista li h3:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #000;
+      margin: 2px auto;
+    }
+
+  .produtos_lista li p {
+    padding: 10px 20px 20px 20px;
+  }
+
+.produtos_icone {
+  background: #000;
+  padding: 20px;
+}
+
+.call {
+  padding-top: 40px;
+  text-align: center;
+  clear: both;
+}
+
+  .call p {
+    margin-bottom: 20px;
+  }
+/* ================Qualidade==================================*/
+
+.qualidade {
+  padding: 35px 0;
+}
+
+  .qualidade:after {
+    content: "";
+    width: 630px;
+    height: 83px;
+    display: block;
+    background: url("../../img/home/qualidade/linhas.svg") no-repeat;
+    position: absolute;
+    top: 158px;
+    right: 165px;
+    z-index: -1;
+  }
+
+  .qualidade img {
+    margin: 0 auto;
+  }
+
+.qualidade_lista {
+  padding-top: 40px;
+  overflow: auto; /* clear-fix */
+}
+
+  .qualidade_lista li {
+    text-align: center;
+    padding: 0 40px;
+  }
+
+    .qualidade_lista li h3 {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-top: 20px;
+    }
+
+      .qualidade_lista li h3:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #000;
+        margin: 6px auto;
+      }
+/* ================Footer/Quoter==============================*/
+
+.quebra p {
+  font-style: italic;
+}
+
+.quebra {
+  width: 100%;
+  height: 276px;
+  background: url("../../img/home/footer/quoter/quoter.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding-top: 40px;
+}
+
+  .quebra .quote-externo {
+    max-width: 400px;
+  }
+
+/* ================Footer=====================================*/
+
+.footer {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+  .footer h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #fec63e;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+    .footer h3:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #fec63e;
+      margin: 6px 0 20px 0;
+    }
+
+.footer_historia {
+  padding-right: 40px;
+}
+
+.footer_contato ul li {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.footer_redes ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+  .footer_redes ul li a {
+    border: 3px solid #fec63e;
+    display: block;
+    padding: 10px;
+  }
+
+    .footer_redes ul li a:hover {
+      border-color: #fff;
+    }
+
+.copy {
+  width: 100%;
+  background: #fec63e;
+  padding: 20px 0;
+}
+
+/* ================Javascript=========================== */
+[data-slide] {
+  position: relative;
+}
+
+  [data-slide] > * {
+    position: absolute;
+    top: 0px;
+    opacity: 0
+  }
+
+  [data-slide] > .active {
+    position: relative;
+    opacity: 1;
+    transition: opacity 500ms;
+  }
+
+[data-slide-nav] {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+  [data-slide-nav] button {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 4px;
+    padding: 0px;
+    border: none;
+    border-radius: 6px;
+    text-indent: -99px;
+    overflow: hidden;
+    background: #1d1d1d;
+  }
+
+    [data-slide-nav] button.active {
+      background: #fec63e;
+    }
+
+[data-anime] {
+  opacity: 0;
+}
+
+.fadeInDown {
+  transform: translate3d(0,-50px,0);
+}
+
+.anime {
+  opacity: 1;
+  transform: none;
+  transition: opacity 800ms, transform 800ms;
+}
+/*=======================Final do Estilo=======================================*/
+
+/*=======================Começo do Sobre=======================================*/
+/*==========Interna sobre=====================*/
+
+.interna_sobre {
+  background: url("../../img/sobre/foto-introducao.jpg") no-repeat center;
+  background-size: cover;
+}
+/*==========Missão============================*/
+.missao_sobre {
+  padding-top: 60px;
+}
+
+  .missao_sobre p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 1em;
+    padding-right: 60px
+  }
+
+  .missao_sobre ul li {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+.foto-fabrica {
+  padding-top: 20px;
+}
+/*=======================Final do Sobre========================================*/
+/*=======================Começo do Produto=====================================*/
+/*==========Interna sobre=====================*/
+
+.interna_produto {
+  background: url("../../img/home/produto/titulo_interno.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/*==========Produto item=====================*/
+.produto_item {
+  padding: 20px 0;
+}
+
+
+  .produto_item h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    position: relative;
+    top: -180px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: -50px;
+  }
+
+    .produto_item h2:after, .produto_item h2:before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #fff;
+      margin: 6px auto 8px auto;
+    }
+/*==========Produto icone=====================*/
+.produto_icone {
+  background: #000;
+  padding: 15px;
+}
+
+  .produto_icone img {
+    margin: 0 auto;
+  }
+/*==========Produto info=======================*/
+
+.produto_info {
+  background: #000;
+}
+
+  .produto_info p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 25px;
+    height: 153px;
+    padding: 30px 40px;
+  }
+
+  .produto_info ul li {
+    background: #fec63e;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    float: left;
+    width: 229px;
+    height: 49px;
+    text-align: center;
+    padding-top: 16px;
+  }
+
+    .produto_info ul li:nth-child(1), .produto_info ul li:nth-child(2) {
+      margin-bottom: 2px;
+    }
+
+    .produto_info ul li:nth-child(even) {
+      margin-left: 2px;
+    }
+/*==========Formulario=======================*/
+.formulario_visita {
+  background: #000;
+  width: 100%;
+  margin-top: 60px;
+  padding: 40px 0;
+}
+
+  .formulario_visita h2 {
+    color: #fec63e;
+    padding-bottom: 40px;
+  }
+
+    .formulario_visita h2:after {
+      background: #fec63e;
+    }
+
+.form {
+  padding-right: 60px;
+}
+
+  .form label {
+    display: block;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 4px;
+  }
+
+  .form input {
+    display: block;
+    width: 100%;
+    border: 4px solid #fec63e;
+    background: none;
+    color: #fff;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    outline: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+  }
+
+  .form textarea {
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: 4px solid #fec63e;
+    background: none;
+    color: #fff;
+    padding: 7px 10px;
+    margin-bottom: 20px;
+    outline: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+  }
+
+  .form button {
+    padding: 7px 40px;
+    background: none;
+  }
+
+.dados_visita {
+  color: #fff;
+}
+
+  .dados_visita h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fec63e;
+    margin-bottom: 5px;
+  }
+
+  .dados_visita span {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    padding-bottom: 10px;
+  }
+
+    .dados_visita span:nth-of-type(1) {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+/*=======================Final do Produto======================================*/
+
+/*=======================Começo do Portfólio===================================*/
+/*==========Interna sobre=====================*/
+
+.interna_portfolio {
+  background: url("../../img/portfolio/fabrica.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.quote-interno {
+  padding: 60px 0;
+  max-width: 500px;
+  height: 260px;
+  margin: 0 auto;
+}
+
+  .quote-interno p {
+    text-align: center;
+    font-family: Georgia,"Times New Roman", serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+
+  .quote-interno cite {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    float: right;
+  }
+
+/*=======================Final do Portfólio====================================*/
+/*=======================Começo do Contato=====================================*/
+/*==========Interna contato====================*/
+.interna_contato {
+  background: url("../../img/contato/titulo_interno.jpg")no-repeat center;
+  background-size: cover;
+}
+
+.contato {
+  padding: 40px 0;
+}
+
+.contato_form {
+  padding-right: 60px;
+}
+
+  .contato_form label {
+    display: block;
+    width: 100%;
+    font-family: Georgia,"Times New Roman", serif;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 4px;
+  }
+  .contato_form input {
+    display: block;
+    width: 100%;
+    border: 4px solid #fec63e;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    outline: none;
+    font-family: Georgia,"Times New Roman", serif;
+    font-size: 14px;
+  }
+  .contato_form textarea {
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: 4px solid #fec63e;
+    padding: 7px 10px;
+    margin-bottom: 20px;
+    font-family: Georgia,"Times New Roman", serif;
+    font-size: 14px;
+  }
+  
+.contato_dados h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #fec63e;
+}
+
+.contato_dados span {
+    display: block;
+    font-size: 18px;
+    font-family: Georgia,"Times New Roman", serif;
+    line-height: 30px;
+}
+
+    .contato_dados span:nth-of-type(5) {
+        margin-bottom: 45px;
+    }
+
+    .contato_dados span:nth-of-type(2) {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+.contato_dados ul {
+    margin-top: 10px;
+}
+
+    .contato_dados ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+        .contato_dados ul li a {
+            border: 3px solid #fec63e;
+            display: block;
+            padding: 10px;
+        }
+
+.contato_dados p {
+    margin: 8px 0;
+}
+
+.contato_dados ul li a:hover {
+    border-color: #000;
+}
+
+.btn_contato .btn {
+    background: transparent;
+}
+
+/*=======================Final do Contato======================================*/
+/*=======================Começo do Cliente=====================================*/
+/*==========Index Cliente============================*/
+
+.interna_cliente {
+    background: url("../../images/carousel1.jpg")no-repeat center;
+    background-size: cover;
+}
+
+.table td {
+    border: none !important;
+}
+
+.table th {
+    border: none !important;
+}
+
+.table_cliente {
+    margin-top: 40px;
+}
+
+.call .btn_cliente {
+    margin-bottom: 40px;
+}
+
+/*==========Registro Cliente============================*/
+
+/*==========Detalhe Cliente============================*/
+.interna_cliente_detalhe {
+    background: url("../../images/carousel1.jpg")no-repeat center;
+    background-size: cover;
+}
+
+
+.detalhes {
+    padding-left: 300px;
+    padding-top: 40px;
+}
+
+/*=======================Final do Cliente======================================*/
+
+/*=======================Começo do Registro====================================*/
+/*==========Estilo Registro============================*/
+.btn_registro .btn {
+    background: transparent;
+}
+/*==========Interna sobre=====================*/
+
+
+.interna_registro {
+    background: url("../../images/carousel3.jpg")no-repeat center;
+    background-size: cover;
+}
+
+.registro {
+    padding: 40px 0;
+}
+
+.registro_form {
+    padding-right: 60px;
+}
+
+    .registro_form label {
+        display: block;
+        width: 100%;
+        font-family: Georgia,"Times New Roman", serif;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 4px;
+    }
+
+    .registro_form input {
+        display: block;
+        width: 100%;
+        border: 4px solid #fec63e;
+        padding: 7px 10px;
+        margin-bottom: 10px;
+        outline: none;
+        font-family: Georgia,"Times New Roman", serif;
+        font-size: 14px;
+    }
+
+.btn_registrar .btn {
+    background: transparent;
+}
+
+/*=======================Final do Registro=====================================*/
+
+/*=======================Começo do Error=======================================*/
+.alerta {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+
+    .alerta h1 {
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+    .alerta h2 {
+        margin: 20px auto 40px;
+        max-width: 450px;
+        font-size: 24px;
+    }
+/*=======================Final do Error====================================*/
+/*=======================Começo do Login=======================================*/
+.interna_login {
+    background: url('../images/carousel1.jpg')no-repeat center;
+    background-size: cover;
+}
+
+.login {
+    padding: 40px 0;
+}
+
+.login_form {
+    padding: 60px 0;
+}
+
+    .login_form label {
+        display: block;
+        width: 100%;
+        font-family: Georgia,"Times New Roman", serif;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 4px;
+    }
+
+    .login_form input {
+        display: block;
+        width: 100%;
+        border: 4px solid #fec63e;
+        padding: 7px 10px;
+        margin-bottom: 10px;
+        outline: none;
+        font-family: Georgia,"Times New Roman", serif;
+        font-size: 14px;
+    }
+
+    .login_form .link p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+.checkbox label {
+    padding: 0;
+    padding-right: 300px;
+}
+
+.btn_login .btn {
+    background: transparent;
+}
+
+
+.service h4 {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.btn_service .btn {
+    background: transparent;
+    margin-left: 5px;
+    margin-bottom: 40px;
+}
+
+
+/*=======================Final do Login========================================*/
+/*=======================Começo do Responsivo==================================*/
+/*=======================Estilo para tablets=======================*/
+@media only screen and (min-width: 788px) and (max-width: 979px) {
+    /*=======================Menu======================================*/
+    .header img {
+        margin: 0 auto 10px auto;
+    }
+
+    .header_menu nav {
+        padding-left: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .header_menu ul li a {
+        font-size: 11px;
+    }
+
+        .header_menu ul li a:hover {
+            font-size: 10px;
+        }
+    /*==================Qualidade Home=============================*/
+    .qualidade img {
+        margin-right: 288px;
+    }
+
+    .qualidade:after {
+        right: 66px;
+    }
+
+    .qualidade_lista li {
+        padding: 0 10px;
+    }
+
+    /*==================Footer=====================================*/
+
+    .footer_redes ul li a {
+        border: 3px solid #fec63e;
+        display: block;
+        padding: 6px;
+    }
+
+        .footer_redes ul li a img {
+            width: 26px;
+            height: 26px;
+        }
+
+    /*=================Produtos====================================*/
+
+    .produto_item h2 {
+        top: -150px;
+        margin-bottom: -50px;
+    }
+
+    .produto_icone {
+        height: 203px;
+        width: 220px;
+    }
+
+    .produto_info p {
+        font-size: 14px;
+        line-height: 20px;
+        height: 103px;
+        padding: 20px 30px;
+    }
+
+    .produto_info ul li {
+        width: 181px;
+        height: 49px;
+    }
+}
+/* Final do estilo para tablets */
+
+/*Estilo para smartphone*/
+@media only screen and (max-width: 787px) {
+
+    /*Header*/
+    .header {
+        position: relative;
+        padding-bottom: 0px;
+    }
+
+        .header img {
+            margin: 0 auto 10px auto;
+        }
+
+    .header_menu {
+        text-align: center;
+    }
+
+        .header_menu ul li {
+            margin: 5px;
+        }
+
+            .header_menu ul li a {
+                font-size: 12px;
+                border: 4px solid #000;
+                width: 120px;
+                display: block;
+                float: left;
+            }
+
+                .header_menu ul li a:hover {
+                    border-color: #fff;
+                }
+
+                .header_menu ul li a.menu_ativo {
+                    border-color: #fff;
+                }
+
+    /*Introducao*/
+
+    .introducao h1 {
+        font-size: 36px;
+    }
+
+    .introducao {
+        margin-top: 0px;
+        padding-top: 40px;
+        background: url('../../img/home/introducao/introducao-mobile.jpg')no-repeat center;
+        background-size: cover;
+    }
+
+    /*Introdução Interna*/
+
+    .introducao-interna {
+        margin-top: 0px;
+    }
+
+    /*Call*/
+    .call {
+        padding-top: 10px;
+    }
+
+    /*Qualidade Home*/
+    .qualidade:after {
+        display: none;
+    }
+
+    /*Sobre*/
+
+    .missao_sobre p {
+        font-size: 14px;
+        line-height: 20px;
+        padding-right: 0px;
+    }
+
+    .missao_sobre ul li {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    /*Produtos*/
+
+    .produto_item h2 {
+        font-size: 22px;
+        top: -100px;
+        margin-bottom: -68px;
+    }
+
+    .produto_icone {
+        padding: 41px 0;
+    }
+
+    .produto_info p {
+        font-size: 14px;
+        line-height: 20px;
+        height: auto;
+        padding: 20px 30px;
+    }
+
+    .produto_info ul li {
+        width: 149px;
+        height: 49px;
+        font-size: 14px;
+        line-height: 20px;
+        padding-top: 14px;
+    }
+
+    .form {
+        padding-right: 0px;
+    }
+
+    .orcamento_dados ul {
+        padding-right: 0px;
+    }
+
+    /*Contato*/
+
+    .contato_form {
+        padding-right: 0px;
+        margin-bottom: 40px;
+    }
+}
+/* Final do estilo para smartphone */
+
+/*====================

@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <Content Remove="Views\Home\Privacy.cshtml" />
+    <Content Remove="Views\_LoginPartial.cshtml" />
   </ItemGroup>
 
 
